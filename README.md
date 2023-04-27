@@ -18,7 +18,7 @@ Open config.json in your favorite text editor and fill in the json.
 ### Install the Service
 I recommend using PowerShell to install. You'll need to run as Administrator in order to register the Service with Windows.
 Execute the command `sc.exe create CherryDDNS binpath="<path/to/CherryDDNS.exe"`
-Optionally I would add a brief description such as `sc.exe description CherryDDNS "DDNS Service utilizing GoDaddy's API"
+Optionally I would add a brief description such as `sc.exe description CherryDDNS "DDNS Service utilizing GoDaddy's API"`
 ![image](https://user-images.githubusercontent.com/32217493/234915789-18a9c7fd-5674-43a2-9a56-edb55494f6b2.png)
 
 If no issues were encountered you should now see the Service in your Services List and should be able to start it.
