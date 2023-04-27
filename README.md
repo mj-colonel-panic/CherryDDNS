@@ -7,11 +7,11 @@ You may use the CherryDDNS.zip archive on the [latest release page](https://gith
 ### Edit Configuration
 In order to run properly, the Service needs to know what to update. You must configure your DNS Records and API Credentials in config.json. If you do not have an API Key you will need to [create one here](https://developer.godaddy.com/keys). 
 Open config.json in your favorite text editor and fill in the json.
-**Secret:** the API Secret  
-**Key:** the API Key  
-**Records:** An Array of  
- - **HostName:** This is the Subdomain you're targeting. You can use @ to target the root domain.  
- -  **DomainName:** The Domain you're targeting.  
+- **Secret:** the API Secret  
+- **Key:** the API Key  
+- **Records:** An Array of  
+   * **HostName:** This is the Subdomain you're targeting. You can use @ to target the root domain.  
+   *  **DomainName:** The Domain you're targeting.  
    
 ![image](https://user-images.githubusercontent.com/32217493/234913815-22edb4d3-8761-4fa0-9a1c-ab5efce1cfcd.png)
 
