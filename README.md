@@ -10,8 +10,8 @@ Open config.json in your favorite text editor and fill in the json.
 **Secret:** the API Secret  
 **Key:** the API Key  
 **Records:** An Array of  
-   **HostName:** This is the Subdomain you're targeting. You can use @ to target the root domain.  
-\t   **DomainName:** The Domain you're targeting.  
+ - **HostName:** This is the Subdomain you're targeting. You can use @ to target the root domain.  
+ -  **DomainName:** The Domain you're targeting.  
    
 ![image](https://user-images.githubusercontent.com/32217493/234913815-22edb4d3-8761-4fa0-9a1c-ab5efce1cfcd.png)
 
