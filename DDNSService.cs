@@ -24,10 +24,12 @@ public sealed class DDNSService : BackgroundService
         }
     }
 
-    private DDNSService() 
+    public DDNSService() 
     {
         VerifyConfig();
-        client.DefaultRequestHeaders.Add("Authorization", Config.Instance.AuthHeader);
+        _ip = "localhost";
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("sso-key", Config.Instance.AuthHeader);
+        //client.DefaultRequestHeaders.Add("Authorization", );
         client.DefaultRequestHeaders.Accept.Add(CONTENT_TYPE);
     }
 
@@ -87,7 +89,7 @@ public sealed class DDNSService : BackgroundService
         }
         catch (Exception ex)
         {
-            if (ex.GetType() == typeof(SocketException) && ex.Message == "No such host is known")
+            if (ex.Source == "System.Net.NameResolution" || ex.Message == "No such host is known")
             {
                 return "NO RECORD";
             }
@@ -98,6 +100,7 @@ public sealed class DDNSService : BackgroundService
 
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        return Instance.ExecuteAsync(stoppingToken);
+        Instance.Update();
+        return Task.CompletedTask;
     }
 }
