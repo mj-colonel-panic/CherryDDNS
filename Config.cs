@@ -47,7 +47,7 @@ namespace CherryDDNS
         {
             get
             {
-                return $"sso-key {Key}:{Secret}";
+                return $"{Key}:{Secret}";
             }
         }
 
